@@ -27,7 +27,7 @@ set(TP1_libSocket_HEADERS "libSocket/client.h"
 							"libSocket/SocketManager.h")
 
 add_library(TP1_libSocket STATIC ${TP1_libSocket_SRC} ${TP1_libSocket_HEADERS})
-
+target_include_directories(TP1_libSocket PUBLIC libSocket)
 ##########
 
 
