@@ -2,7 +2,7 @@
 
 namespace uqac {
 
-    Client::Client(std::string protocole, std::string addr, std::string port, std::function<void(Connection*, char*)> onRecv, std::function<void(Connection*)> onDisconnect) : Network(protocole)
+    Client::Client(std::string protocole, std::string addr, std::string port) : Network(protocole)
     {
         if (protocole == "TCP")
             m_connections.push_back(new TCPConnection(addr, port));

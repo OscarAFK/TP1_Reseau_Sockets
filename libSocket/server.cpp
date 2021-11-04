@@ -2,7 +2,7 @@
 
 namespace uqac {
 
-    Server::Server(std::string protocole, std::string port, std::function<void(Connection*)> onConnect, std::function<void(Connection*, char*)> onRecv, std::function<void(Connection*)> onDisconnect) : Network(protocole)
+    Server::Server(std::string protocole, std::string port) : Network(protocole)
     {
         m_terminal = new Terminal(protocole, port);
         if (protocole == "UDP") {

@@ -15,7 +15,7 @@ namespace uqac {
 
 
         Server() = default;       // Constructeur
-        Server(std::string protocole, std::string port, std::function<void(Connection*)> onConnect, std::function<void(Connection*, char*)> onRecv, std::function<void(Connection*)> onDisconnect);       // Constructeur
+        Server(std::string protocole, std::string port);       // Constructeur
         ~Server();      // Destructeur
 
         void Listen(std::function<void(Connection*)> onConnect, std::function<void(Connection*, char*)> onRecv, std::function<void(Connection*)> onDisconnect);

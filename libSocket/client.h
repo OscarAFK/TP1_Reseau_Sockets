@@ -12,7 +12,7 @@ namespace uqac {
 	public:
 
 		Client() = default;		// constructeur
-		Client(std::string protocole, std::string addr, std::string port, std::function<void(Connection*, char*)> onRecv, std::function<void(Connection*)> onDisconnect);		// constructeur
+		Client(std::string protocole, std::string addr, std::string port);		// constructeur
 		~Client();		// destructeur
 
 		void Listen(std::function<void(Connection*)> onConnect, std::function<void(Connection*, char*)> onRecv, std::function<void(Connection*)> onDisconnect);
