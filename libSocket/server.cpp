@@ -8,12 +8,12 @@ namespace uqac {
         if (protocole == "UDP") {
             m_connections.push_back(new TCPConnection(m_terminal->getSocket()));
         }
-        m_threadNetwork = std::thread(&Server::Update, this, onConnect, onRecv, onDisconnect);
+        //m_threadNetwork = std::thread(&Server::Update, this, onConnect, onRecv, onDisconnect);
     }
 
     Server::~Server()
     {
-        m_threadNetwork.join();
+        //m_threadNetwork.join();
         std::cout << "Closing server\n";
     }
 

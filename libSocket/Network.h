@@ -22,7 +22,7 @@ namespace uqac {
 
         Terminal* m_terminal;
         std::vector<Connection*>    m_connections;
-        std::thread m_threadNetwork;
+        //std::thread m_threadNetwork;
         std::atomic<bool> m_quit;
         std::string m_protocole;
 
